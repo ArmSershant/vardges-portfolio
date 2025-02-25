@@ -1,0 +1,26 @@
+@use "./assets/styles/global/colors.scss" as *;
+
+@font-face {
+    font-family: "SpaceGrotesk";
+    src: url("./assets/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "SpaceGrotesk";
+    transition: all ease 0.3;
+}
+
+body {
+    background-color: $light-gray;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll !important;
+    transition: all ease 0.3;
+}

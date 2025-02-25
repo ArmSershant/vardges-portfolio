@@ -1,0 +1,15 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 4.375rem;
+    text-transform: uppercase;
+    &_links {
+        display: flex;
+        align-items: right;
+        gap: 1rem;
+        a {
+            text-decoration: none;
+        }
+    }
+}

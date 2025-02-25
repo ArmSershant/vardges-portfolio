@@ -1,0 +1,6 @@
+@use "../../../assets/styles/global/global.scss" as *;
+
+.main {
+    @extend .sectionBgColor;
+    height: 100vh;
+}
