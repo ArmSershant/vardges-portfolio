@@ -1,8 +1,8 @@
 @use "./assets/styles/global/colors.scss" as *;
 
 @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("./assets/fonts/Space_Grotesk/static/SpaceGrotesk-Regular.ttf");
+    font-family: "Space Grotesk";
+    src: url("./assets/fonts/Space_Grotesk/static/SpaceGrotesk-Medium.ttf");
     font-display: swap;
 }
 
@@ -11,16 +11,20 @@
     padding: 0;
     box-sizing: border-box;
     user-select: none;
-    font-family: "SpaceGrotesk";
-    transition: all ease 0.3;
+    font-family: "Space Grotesk", sans-serif;
+    transition: all ease-in-out 0.3;
+    color: $light-gray;
 }
 
 body {
-    background-color: $light-gray;
+    background: $background;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll !important;
-    transition: all ease 0.3;
+}
+
+a {
+    text-decoration: none;
 }

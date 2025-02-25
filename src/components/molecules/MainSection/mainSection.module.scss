@@ -1,6 +1,8 @@
+@use "../../../assets/styles/global/colors.scss" as *;
 @use "../../../assets/styles/global/global.scss" as *;
 
 .main {
-    @extend .sectionBgColor;
+    @extend .container;
+    background: $background;
     height: 100vh;
 }

@@ -1,6 +1,7 @@
 import AboutMeSection from "../../components/molecules/AboutMeSection/AboutMeSection";
 import ContactSection from "../../components/molecules/ContactSection/ContactSection";
 import ExperienceSection from "../../components/molecules/ExperienceSection/ExperienceSection";
+import Footer from "../../components/molecules/Footer/Footer";
 import MainSection from "../../components/molecules/MainSection/MainSection";
 import MarqueSection from "../../components/molecules/MarqueeSection/MarqueeSection";
 import Navbar from "../../components/molecules/Navbar/Navbar";
@@ -20,6 +21,8 @@ const DefaultLayout = () => {
       <ServicesSection id={"services"} />
       <ExperienceSection id={"experience"} />
       <ContactSection id={"contact"} />
+
+      <Footer />
     </>
   );
 };

@@ -1,15 +1,56 @@
+@use "../../../assets/styles/global/colors.scss" as *;
+
 .navbar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 4.375rem;
     text-transform: uppercase;
-    &_links {
+    padding-block: 1.25rem;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    &_wrapper {
         display: flex;
-        align-items: right;
-        gap: 1rem;
-        a {
-            text-decoration: none;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1320px;
+        margin: auto;
+        padding: 0 0.75rem;
+        &_logo {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            font-size: 2.5em;
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
+        &_links {
+            display: flex;
+            padding: 0 3.125rem 0 0;
+            margin: 0 0 0 auto;
+            a {
+                color: $light-gray;
+                font-size: 0.875em;
+                padding: 0.5rem 1.25rem;
+                height: fit-content;
+            }
+        }
+        &_contactLink {
+            // padding: 0.5rem 0;
+            font-size: 1em;
         }
     }
+}
+
+.scrolled {
+    background: $dark-navy;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }

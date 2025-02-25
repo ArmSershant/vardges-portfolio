@@ -1,7 +1,8 @@
 @use "../../../assets/styles/global/colors.scss" as *;
 @use "../../../assets/styles/global/global.scss" as *;
-.contact {
-    @extend .container;
-    background: $background;
-    height: 100vh;
+
+.button {
+    border-radius: 2.5rem;
+    background: $bright-blue;
+    padding: 0.813rem 1.875rem;
 }
