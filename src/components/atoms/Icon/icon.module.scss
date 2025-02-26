@@ -1,0 +1,16 @@
+@use "../../../assets/styles/global/colors.scss" as *;
+@use "../../../assets/styles/global/global.scss" as *;
+
+.icon {
+    > a {
+        > img {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+    }
+    &:hover {
+        transform: translateY(-0.5rem);
+    }
+}

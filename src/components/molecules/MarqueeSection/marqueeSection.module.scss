@@ -1,5 +1,18 @@
 @use "../../../assets/styles/global/colors.scss" as *;
 @use "../../../assets/styles/global/global.scss" as *;
-.marquee{
-    
+.marquee {
+    @extend .container;
+    padding: unset;
+    background: $light-navy;
+    &_wrapper {
+        padding: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        max-width: 1320px;
+        gap: 2rem;
+    }
 }

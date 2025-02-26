@@ -12,7 +12,7 @@
     box-sizing: border-box;
     user-select: none;
     font-family: "Space Grotesk", sans-serif;
-    transition: all ease-in-out 0.3;
+    transition: all 0.3s ease-out;
     color: $light-gray;
 }
 
@@ -27,4 +27,5 @@ body {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }

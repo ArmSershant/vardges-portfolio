@@ -1,0 +1,17 @@
+@use "../../../assets/styles/global/colors.scss" as *;
+@use "../../../assets/styles/global/global.scss" as *;
+
+.dot {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $bright-blue;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: transform 0.3s ease-out;
+    z-index: 9999;
+    &:hover {
+        transform: scale(1.5);
+    }
+}

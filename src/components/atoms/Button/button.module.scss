@@ -2,7 +2,18 @@
 @use "../../../assets/styles/global/global.scss" as *;
 
 .button {
+    border: 1px solid transparent;
     border-radius: 2.5rem;
     background: $bright-blue;
     padding: 0.813rem 1.875rem;
+    text-align: center;
+    align-items: center;
+    > img {
+        width: 0.75rem;
+        transform: rotate(90deg);
+    }
+    &:hover {
+        background-color: black;
+        border: 1px solid $light-gray;
+    }
 }

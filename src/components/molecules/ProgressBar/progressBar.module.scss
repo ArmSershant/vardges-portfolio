@@ -1,0 +1,12 @@
+@use "../../../assets/styles/global/colors.scss" as *;
+
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.1rem;
+    background: $bright-blue;
+    transform-origin: 0%;
+    z-index: 9999;
+}
