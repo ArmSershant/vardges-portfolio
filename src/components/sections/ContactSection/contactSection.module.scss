@@ -1,0 +1,11 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/global.scss" as *;
+.contact {
+    @extend .container;
+    background: $navy-gradient;
+    height: 100vh;
+    >div{
+        width: 100%;
+        background-color: yellow;
+    }
+}

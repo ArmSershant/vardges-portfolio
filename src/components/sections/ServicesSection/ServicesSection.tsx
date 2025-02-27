@@ -1,8 +1,8 @@
 import { Typewriter } from "react-simple-typewriter";
-import { sectionProps } from "../../../../utils/types/types";
+import { serviceIcons, serviceImages } from "../../../utils/images";
+import { sectionProps } from "../../../utils/types/types";
+import ServiceBox from "../../molecules/ServiceBox/ServiceBox";
 import styles from "./ServicesSection.module.scss";
-import ServiceBox from "../../ServiceBox/ServiceBox";
-import { serviceImages, serviceIcons } from "../../../../utils/images";
 
 const ServicesSection = (props: sectionProps) => {
   return (

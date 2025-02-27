@@ -1,8 +1,8 @@
 import { Typewriter } from "react-simple-typewriter";
-import { scrolling } from "../../../../utils/functions/scrolling";
-import { sectionProps } from "../../../../utils/types/types";
-import Button from "../../../atoms/Button/Button";
-import Icon from "../../Icon/Icon";
+import { scrolling } from "../../../utils/functions/scrolling";
+import { sectionProps } from "../../../utils/types/types";
+import Button from "../../atoms/Button/Button";
+import Icon from "../../molecules/Icon/Icon";
 import styles from "./mainSection.module.scss";
 
 const MainSection = (props: sectionProps) => {
@@ -31,7 +31,7 @@ const MainSection = (props: sectionProps) => {
             <p>
               <Typewriter
                 words={[
-                  "Clean code always looks like it was written by someone who cares."
+                  "Clean code always looks like it was written by someone who cares.",
                 ]}
                 typeSpeed={50}
               />

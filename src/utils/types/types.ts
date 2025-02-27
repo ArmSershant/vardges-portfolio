@@ -17,3 +17,13 @@ export type ServiceBoxProps = {
   title?: string;
   description?: string;
 };
+
+export type ExperienceBoxProps = {
+  position?: string;
+  location?: "Remote" | "Onsite" | "Hybrid";
+  duration?: string;
+  type?: "Full Time" | "Part Time" | "Internship" | "Contract";
+  title?: string;
+  description?: string;
+  jobUrl?: string;
+};

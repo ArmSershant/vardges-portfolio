@@ -1,4 +1,4 @@
-@use "./assets/styles/global/colors.scss" as *;
+@use "./assets/styles/colors.scss" as *;
 
 @font-face {
     font-family: "Space Grotesk";
@@ -17,7 +17,7 @@
 }
 
 body {
-    background: $background;
+    background: $navy-gradient;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;

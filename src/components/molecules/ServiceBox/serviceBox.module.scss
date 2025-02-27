@@ -1,5 +1,5 @@
-@use "../../../assets/styles/global/colors.scss" as *;
-@use "../../../assets/styles/global/global.scss" as *;
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/global.scss" as *;
 
 .serviceBox {
     width: 305px;
@@ -38,7 +38,7 @@
             background-color: $bright-blue;
         }
         &_title {
-            font-size: 20px;
+            font-size: 1.25em;
             z-index: 1;
         }
         &_description {
