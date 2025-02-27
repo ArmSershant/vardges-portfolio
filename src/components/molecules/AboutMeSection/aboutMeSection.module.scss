@@ -1,11 +1,87 @@
 @use "../../../assets/styles/global/colors.scss" as *;
 @use "../../../assets/styles/global/global.scss" as *;
-.aboutMe{
+
+.aboutMe {
     @extend .container;
     background: $background;
     height: 100vh;
-    >div{
+    &_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
         width: 100%;
-        background-color: yellow;
+        max-width: 1320px;
+        &_image {
+            width: 50%;
+            height: auto;
+            filter: drop-shadow(5px 5px 5px $dark-navy);
+            &_wrapper {
+                width: fit-content;
+                background-color: $light-navy;
+                border-radius: 2rem;
+                border: 0.5px solid hsla(0, 0%, 100%, 0.1);
+                > img {
+                    filter: drop-shadow(3.5px 3.5px 5px $light-navy);
+                    height: 500px;
+                }
+            }
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 50%;
+            &_title {
+                background-color: $light-navy;
+                width: fit-content;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                > p {
+                    text-transform: uppercase;
+                    font-size: 1em;
+                }
+            }
+            &_available {
+                > p {
+                    text-transform: uppercase;
+                    font-size: 2.5em;
+                    :nth-child(1) {
+                        color: $bright-blue;
+                    }
+                }
+            }
+            &_saying {
+                > p {
+                    font-size: 1em;
+                }
+            }
+            &_reviews {
+                display: flex;
+                gap: 1rem;
+                width: 380px;
+                &_reviewBox {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 0.5rem;
+                    padding: 20px;
+                    text-transform: capitalize;
+                    background-color: $light-navy;
+                    border: 0.5px solid hsla(0, 0%, 100%, 0.1);
+                    border-radius: 0.5rem;
+                    &_number {
+                        font-size: 28px;
+                    }
+                    &_text {
+                        font-size: 13px;
+                    }
+                }
+            }
+            &_getInTouch {
+                display: flex;
+                gap: 1.5rem;
+            }
+        }
     }
 }

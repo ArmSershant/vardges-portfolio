@@ -23,7 +23,7 @@ const MainSection = (props: sectionProps) => {
                 cursorStyle="|"
                 typeSpeed={100}
                 deleteSpeed={50}
-                delaySpeed={1000}
+                delaySpeed={2500}
               />
             </p>
           </div>
@@ -31,15 +31,9 @@ const MainSection = (props: sectionProps) => {
             <p>
               <Typewriter
                 words={[
-                  "Clean code always looks like it was written by someone who cares.",
-                  "Clean code always looks like it was written by someone who cares.",
+                  "Clean code always looks like it was written by someone who cares."
                 ]}
-                loop={true}
-                cursor
-                cursorStyle="|"
-                typeSpeed={100}
-                deleteSpeed={50}
-                delaySpeed={1000}
+                typeSpeed={50}
               />
             </p>
           </div>

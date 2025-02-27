@@ -4,14 +4,15 @@
 .main {
     @extend .container;
     background: $background;
-    height: 100vh;
+    padding-top: 240px;
+    height: 100vmin;
     &_wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         margin: auto;
         width: 100%;
-        height: 100vmin;
+        gap: 10rem;
         max-width: 1320px;
         &_info {
             display: flex;
