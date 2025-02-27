@@ -10,3 +10,10 @@ export type CircleEffectProps = {
   scale?: string | number;
   rotateDirection?: "right" | "left";
 };
+
+export type ServiceBoxProps = {
+  image?: string;
+  icon?: string;
+  title?: string;
+  description?: string;
+};

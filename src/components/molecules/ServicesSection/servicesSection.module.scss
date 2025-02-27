@@ -1,11 +1,47 @@
 @use "../../../assets/styles/global/colors.scss" as *;
 @use "../../../assets/styles/global/global.scss" as *;
+
 .services {
     @extend .container;
     background: $background;
-    height: 100vh;
-    >div{
+    height: 100vmin;
+    &_wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin: auto;
         width: 100%;
-        background-color: yellow;
+        gap: 5rem;
+        max-width: 1320px;
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            width: 50%;
+            &_title {
+                background-color: $light-navy;
+                width: fit-content;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+                letter-spacing: 4px;
+                > p {
+                    text-transform: uppercase;
+                    font-size: 1em;
+                }
+            }
+            &_providing {
+                > p {
+                    text-transform: uppercase;
+                    font-size: 2.5em;
+                }
+            }
+        }
+        &_serviceBoxes {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
     }
 }

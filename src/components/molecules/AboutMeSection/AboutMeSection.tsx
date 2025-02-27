@@ -13,7 +13,7 @@ const AboutMeSection = (props: sectionProps) => {
         <CircleEffect top={"75%"} right={"90%"} scale={"2"} rotateDirection="left" />
         <div className={styles.aboutMe_wrapper_image}>
           <div className={styles.aboutMe_wrapper_image_wrapper}>
-            <img src="src/assets/images/hackerbg.png" alt="hacker" />
+            <img src="src/assets/images/hacker.png" alt="hacker" />
           </div>
         </div>
         <div className={styles.aboutMe_wrapper_info}>

@@ -17,7 +17,7 @@ const MainSection = (props: sectionProps) => {
             <p>Hey! I'm Vardges</p>
             <p>
               <Typewriter
-                words={["I'm a Developer", "I'm a Designer"]}
+                words={["I'm a Developer", "I'm a Developer"]}
                 loop={true}
                 cursor
                 cursorStyle="|"
