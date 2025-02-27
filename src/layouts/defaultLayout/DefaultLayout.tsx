@@ -1,15 +1,15 @@
 import { useEffect } from "react";
-import Dot from "../../components/atoms/Dot/Dot";
-import AboutMeSection from "../../components/molecules/AboutMeSection/AboutMeSection";
-import ContactSection from "../../components/molecules/ContactSection/ContactSection";
-import ExperienceSection from "../../components/molecules/ExperienceSection/ExperienceSection";
+import Dot from "../../components/molecules/Dot/Dot";
+import AboutMeSection from "../../components/molecules/sections/AboutMeSection/AboutMeSection";
+import ContactSection from "../../components/molecules/sections/ContactSection/ContactSection";
+import ExperienceSection from "../../components/molecules/sections/ExperienceSection/ExperienceSection";
 import Footer from "../../components/molecules/Footer/Footer";
-import MainSection from "../../components/molecules/MainSection/MainSection";
-import MarqueSection from "../../components/molecules/MarqueeSection/MarqueeSection";
+import MainSection from "../../components/molecules/sections/MainSection/MainSection";
+import MarqueSection from "../../components/molecules/sections/MarqueeSection/MarqueeSection";
 import Navbar from "../../components/molecules/Navbar/Navbar";
 import ProgressBar from "../../components/molecules/ProgressBar/ProgressBar";
-import ProjectsSection from "../../components/molecules/ProjectsSection/ProjectsSection";
-import ServicesSection from "../../components/molecules/ServicesSection/ServicesSection";
+import ProjectsSection from "../../components/molecules/sections/ProjectsSection/ProjectsSection";
+import ServicesSection from "../../components/molecules/sections/ServicesSection/ServicesSection";
 
 const DefaultLayout = () => {
   useEffect(() => {

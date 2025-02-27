@@ -1,4 +1,4 @@
-import { sectionProps } from "../../../utils/types/types";
+import { sectionProps } from "../../../../utils/types/types";
 import styles from "./projectsSection.module.scss";
 const ProjectsSection = (props: sectionProps) => {
   return (

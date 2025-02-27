@@ -1,8 +1,8 @@
 import { Typewriter } from "react-simple-typewriter";
-import { scrolling } from "../../../utils/functions/scrolling";
-import { sectionProps } from "../../../utils/types/types";
-import Button from "../../atoms/Button/Button";
-import CircleEffect from "../../atoms/CircleEffect/CircleEffect";
+import { scrolling } from "../../../../utils/functions/scrolling";
+import { sectionProps } from "../../../../utils/types/types";
+import Button from "../../../atoms/Button/Button";
+import CircleEffect from "../../CircleEffect/CircleEffect";
 import styles from "./aboutMeSection.module.scss";
 
 const AboutMeSection = (props: sectionProps) => {
