@@ -1,0 +1,31 @@
+.effect {
+    --scale: 1;
+    transform: scale(var(--scale));
+    position: absolute;
+}
+
+.rotateRight {
+    animation: rotateRightAnimation 15s linear infinite;
+}
+
+.rotateLeft {
+    animation: rotateLeftAnimation 15s linear infinite;
+}
+
+@keyframes rotateRightAnimation {
+    0% {
+        transform: rotate(0deg) scale(var(--scale));
+    }
+    100% {
+        transform: rotate(360deg) scale(var(--scale));
+    }
+}
+
+@keyframes rotateLeftAnimation {
+    0% {
+        transform: rotate(0deg) scale(var(--scale));
+    }
+    100% {
+        transform: rotate(-360deg) scale(var(--scale));
+    }
+}

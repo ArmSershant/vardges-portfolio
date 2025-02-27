@@ -2,12 +2,15 @@ import { Typewriter } from "react-simple-typewriter";
 import { scrolling } from "../../../utils/functions/scrolling";
 import { sectionProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
+import CircleEffect from "../../atoms/CircleEffect/CircleEffect";
 import styles from "./aboutMeSection.module.scss";
 
 const AboutMeSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.aboutMe}>
       <div className={styles.aboutMe_wrapper}>
+        <CircleEffect top={"5%"} left={"90%"} />
+        <CircleEffect top={"75%"} right={"90%"} scale={"2"} rotateDirection="left" />
         <div className={styles.aboutMe_wrapper_image}>
           <div className={styles.aboutMe_wrapper_image_wrapper}>
             <img src="src/assets/images/hackerbg.png" alt="hacker" />
