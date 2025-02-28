@@ -3,8 +3,8 @@ import styles from "./dot.module.scss";
 
 const Dot = () => {
   const dotRef = useRef<HTMLDivElement | null>(null);
-  const position = useRef({ x: -10, y: -10 });
-  const target = useRef({ x: -10, y: -10 });
+  const position = useRef({ x: 100, y: 300 });
+  const target = useRef({ x: 100, y: 300 });
   const speed = 0.3;
 
   useEffect(() => {
