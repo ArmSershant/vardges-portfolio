@@ -1,11 +1,70 @@
 @use "../../../assets/styles/colors.scss" as *;
 @use "../../../assets/styles/global.scss" as *;
+
 .contact {
     @extend .container;
     background: $navy-gradient;
-    height: 100vh;
-    >div{
+    height: 100vmin;
+    &_wrapper {
+        display: flex;
+        justify-content: center;
+        padding: 3rem;
+        margin: auto;
         width: 100%;
-        background-color: yellow;
+        max-width: 1320px;
+        border: 0.5px solid hsla(0, 0%, 100%, 0.1);
+        border-radius: 0.375rem;
+        &_image {
+            width: 50%;
+            height: auto;
+            &_wrapper {
+                width: fit-content;
+                background-color: $light-navy;
+                border-radius: 2rem;
+                border: 0.5px solid hsla(0, 0%, 100%, 0.1);
+                > img {
+                    width: 350px;
+                    height: 350px;
+                }
+            }
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            &_text {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                &_title {
+                    font-size: 2.5em;
+                    text-transform: capitalize;
+                }
+                &_description {
+                    font-size: 1.063em;
+                    opacity: 0.85;
+                }
+            }
+            &_contact {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                &_email,
+                &_number {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    :nth-child(1) {
+                        font-size: 0.9em;
+                        opacity: 0.75;
+                        letter-spacing: 2px;
+                    }
+                    :nth-child(2) {
+                        @extend .underline;
+                        font-size: 1.375em;
+                    }
+                }
+            }
+        }
     }
 }

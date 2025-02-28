@@ -1,4 +1,5 @@
 @use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/global.scss" as *;
 
 .navbar {
     text-transform: uppercase;
@@ -31,10 +32,11 @@
             display: flex;
             padding: 0 3.125rem 0 0;
             margin: 0 0 0 auto;
+            gap: 1.25rem;
             a {
                 color: $light-gray;
                 font-size: 0.875em;
-                padding: 0.5rem 1.25rem;
+                padding: 0.5rem 0;
                 height: fit-content;
                 letter-spacing: 1px;
             }
@@ -52,4 +54,52 @@
     left: 0;
     width: 100%;
     z-index: 1000;
+}
+
+.active_underline {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform-origin: left;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    &.active::after {
+        transform: scaleX(1);
+    }
+
+    &.inactive::after {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+}
+
+.inactive_underline {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.3s ease-in-out;
+    }
 }

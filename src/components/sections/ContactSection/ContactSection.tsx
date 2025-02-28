@@ -1,10 +1,37 @@
-import { sectionProps } from "../../../../utils/types/types";
+import { sectionProps } from "../../../utils/types/types";
 import styles from "./contactSection.module.scss";
 
 const ContactSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.contact}>
-      <div></div>
+      <div className={styles.contact_wrapper}>
+        <div className={styles.contact_wrapper_image}>
+          <div className={styles.contact_wrapper_image_wrapper}>
+            <img src="src/assets/images/hacker2.png" alt="hacker" />
+          </div>
+        </div>
+        <div className={styles.contact_wrapper_info}>
+          <div className={styles.contact_wrapper_info_text}>
+            <p className={styles.contact_wrapper_info_text_title}>
+              Let's discuss your project
+            </p>
+            <p className={styles.contact_wrapper_info_text_description}>
+              Always available for freelancing if the right project comes along,
+              Feel free to contact me.
+            </p>
+          </div>
+          <div className={styles.contact_wrapper_info_contact}>
+            <div className={styles.contact_wrapper_info_contact_email}>
+              <p>Email</p>
+              <a href="Mailto:vardges.movsesyan6@gmail.com">vardges.movsesyan6@gmail.com</a>
+            </div>
+            <div className={styles.contact_wrapper_info_contact_number}>
+              <p>Number</p>
+              <a href="Tel:+37496804036">+374 96 80 40 36</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -14,6 +14,12 @@
     font-family: "Space Grotesk", sans-serif;
     transition: all 0.3s ease-out;
     color: $light-gray;
+    scrollbar-width: none !important; // For Firefox
+    -ms-overflow-style: none !important; // For IE and Edge
+
+    &::-webkit-scrollbar {
+        display: none !important; // For Chrome, Safari
+    }
 }
 
 body {
