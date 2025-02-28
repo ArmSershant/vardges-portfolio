@@ -4,6 +4,7 @@ import { sectionProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
 import Icon from "../../molecules/Icon/Icon";
 import styles from "./mainSection.module.scss";
+import vardges from "../../../assets/images/vardges.png";
 
 const MainSection = (props: sectionProps) => {
   return (
@@ -52,7 +53,7 @@ const MainSection = (props: sectionProps) => {
           </div>
         </div>
         <div className={styles.main_wrapper_image}>
-          <img src="src/assets/images/vardges.png" alt="vardges" />
+          <img src={vardges} alt="vardges" />
         </div>
       </div>
     </div>

@@ -1,4 +1,8 @@
 import styles from "./icon.module.scss";
+import facebook from "../../../assets/icons/social/facebook.svg";
+import github from "../../../assets/icons/social/github.svg";
+import linkedin from "../../../assets/icons/social/linkedin.svg";
+
 const Icon = ({ fb, gh, ln }: { fb?: boolean; gh?: boolean; ln?: boolean }) => {
   return (
     <div className={styles.icon}>
@@ -8,7 +12,7 @@ const Icon = ({ fb, gh, ln }: { fb?: boolean; gh?: boolean; ln?: boolean }) => {
           target="_blank"
           href="https://www.facebook.com/ArmSershant"
         >
-          <img src="src/assets/icons/social/facebook.svg" alt="fb-icon" />
+          <img src={facebook} alt="fb-icon" />
         </a>
       )}
       {gh && (
@@ -17,7 +21,7 @@ const Icon = ({ fb, gh, ln }: { fb?: boolean; gh?: boolean; ln?: boolean }) => {
           target="_blank"
           href="https://github.com/ArmSershant"
         >
-          <img src="src/assets/icons/social/github.svg" alt="gh-icon" />
+          <img src={github} alt="gh-icon" />
         </a>
       )}
       {ln && (
@@ -26,7 +30,7 @@ const Icon = ({ fb, gh, ln }: { fb?: boolean; gh?: boolean; ln?: boolean }) => {
           target="_blank"
           href="https://www.linkedin.com/in/vardges-movsesyan/"
         >
-          <img src="src/assets/icons/social/linkedin.svg" alt="ln-icon" />
+          <img src={linkedin} alt="ln-icon" />
         </a>
       )}
     </div>

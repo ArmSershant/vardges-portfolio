@@ -1,4 +1,5 @@
 import styles from "./button.module.scss";
+import arrowUp from "../../../assets/icons/arrow-up.svg";
 
 const Button = ({
   myClick,
@@ -11,8 +12,7 @@ const Button = ({
 }) => {
   return (
     <div className={styles.button} onClick={myClick}>
-      {children}{" "}
-      {arrow ? <img src="src/assets/icons/arrow-up.svg" alt="arrow" /> : ""}
+      {children} {arrow ? <img src={arrowUp} alt="arrow" /> : ""}
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import { CircleEffectProps } from "../../../utils/types/types";
 import styles from "./circleEffect.module.scss";
+import circle from "../../../assets/effects/circle.svg"
 
 const CircleEffect = ({
   top,
@@ -24,7 +25,7 @@ const CircleEffect = ({
         } as never
       }
     >
-      <img src="src/assets/effects/effect.svg" alt="circle effect" />
+      <img src={circle} alt="circle effect" />
     </div>
   );
 };

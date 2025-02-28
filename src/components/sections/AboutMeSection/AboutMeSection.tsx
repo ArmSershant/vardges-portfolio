@@ -4,16 +4,22 @@ import { sectionProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
 import styles from "./aboutMeSection.module.scss";
 import CircleEffect from "../../molecules/CircleEffect/CircleEffect";
+import hacker from "../../../assets/images/hacker.png";
 
 const AboutMeSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.aboutMe}>
       <div className={styles.aboutMe_wrapper}>
         <CircleEffect top={"5%"} left={"90%"} />
-        <CircleEffect top={"75%"} right={"90%"} scale={"2"} rotateDirection="left" />
+        <CircleEffect
+          top={"75%"}
+          right={"90%"}
+          scale={"2"}
+          rotateDirection="left"
+        />
         <div className={styles.aboutMe_wrapper_image}>
           <div className={styles.aboutMe_wrapper_image_wrapper}>
-            <img src="src/assets/images/hacker.png" alt="hacker" />
+            <img src={hacker} alt="hacker" />
           </div>
         </div>
         <div className={styles.aboutMe_wrapper_info}>

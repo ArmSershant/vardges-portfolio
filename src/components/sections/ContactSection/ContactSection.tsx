@@ -1,6 +1,7 @@
 import { sectionProps } from "../../../utils/types/types";
 import Icon from "../../molecules/Icon/Icon";
 import styles from "./contactSection.module.scss";
+import hacker from "../../../assets/images/hacker2.png";
 
 const ContactSection = (props: sectionProps) => {
   return (
@@ -8,7 +9,7 @@ const ContactSection = (props: sectionProps) => {
       <div className={styles.contact_wrapper}>
         <div className={styles.contact_wrapper_image}>
           <div className={styles.contact_wrapper_image_wrapper}>
-            <img src="src/assets/images/hacker2.png" alt="hacker" />
+            <img src={hacker} alt="hacker" />
           </div>
         </div>
         <div className={styles.contact_wrapper_info}>
@@ -24,16 +25,18 @@ const ContactSection = (props: sectionProps) => {
           <div className={styles.contact_wrapper_info_contact}>
             <div className={styles.contact_wrapper_info_contact_email}>
               <p>Email</p>
-              <a href="Mailto:vardges.movsesyan6@gmail.com">vardges.movsesyan6@gmail.com</a>
+              <a href="Mailto:vardges.movsesyan6@gmail.com">
+                vardges.movsesyan6@gmail.com
+              </a>
             </div>
             <div className={styles.contact_wrapper_info_contact_number}>
               <p>Number</p>
               <a href="Tel:+37496804036">+374 96 80 40 36</a>
             </div>
             <div className={styles.contact_wrapper_info_contact_links}>
-            <Icon fb/>
-            <Icon gh/>
-            <Icon ln/>
+              <Icon fb />
+              <Icon gh />
+              <Icon ln />
             </div>
           </div>
         </div>
