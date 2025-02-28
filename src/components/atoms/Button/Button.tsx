@@ -1,8 +1,16 @@
 import styles from "./button.module.scss";
 
-const Button = ({ arrow, children }: { arrow?: boolean; children: string }) => {
+const Button = ({
+  myClick,
+  arrow,
+  children,
+}: {
+  myClick?: () => void;
+  arrow?: boolean;
+  children?: string;
+}) => {
   return (
-    <div className={styles.button}>
+    <div className={styles.button} onClick={myClick}>
       {children}{" "}
       {arrow ? <img src="src/assets/icons/arrow-up.svg" alt="arrow" /> : ""}
     </div>

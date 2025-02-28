@@ -1,6 +1,8 @@
 import { Typewriter } from "react-simple-typewriter";
 import { sectionProps } from "../../../utils/types/types";
 import styles from "./projectsSection.module.scss";
+import ProjectBox from "../../molecules/ProjectBox/ProjectBox";
+import { project1, project2, project3 } from "../../../utils/projects";
 const ProjectsSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.projects}>
@@ -23,7 +25,11 @@ const ProjectsSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <div className={styles.projects_wrapper_projectBoxes}></div>
+        <div className={styles.projects_wrapper_projectBoxes}>
+          <ProjectBox {...project1} />
+          <ProjectBox {...project2} />
+          <ProjectBox {...project3} />
+        </div>
       </div>
     </div>
   );

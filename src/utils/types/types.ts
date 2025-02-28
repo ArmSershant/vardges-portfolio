@@ -27,3 +27,19 @@ export type ExperienceBoxProps = {
   description?: string;
   jobUrl?: string;
 };
+
+export type Project = {
+  title?: string;
+  description?: string;
+  photoURL?: string;
+  videoURL?: string;
+  type?: string;
+  stack?: string;
+  liveURL?: string;
+  more?: string;
+};
+
+export interface ModalProps {
+  project: Project;
+  onClose: () => void;
+}

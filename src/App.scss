@@ -16,7 +16,7 @@
     color: $light-gray;
     scrollbar-width: none !important; // For Firefox
     -ms-overflow-style: none !important; // For IE and Edge
-
+    cursor: none !important; // Hiding cursor in website
     &::-webkit-scrollbar {
         display: none !important; // For Chrome, Safari
     }

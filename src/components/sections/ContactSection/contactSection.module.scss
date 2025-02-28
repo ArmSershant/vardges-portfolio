@@ -64,6 +64,10 @@
                         font-size: 1.375em;
                     }
                 }
+                &_links {
+                    display: flex;
+                    gap: 0.5rem;
+                }
             }
         }
     }

@@ -2,6 +2,7 @@ import Marquee from "react-fast-marquee";
 import icons from "../../../utils/icons";
 import { sectionProps } from "../../../utils/types/types";
 import styles from "./marqueeSection.module.scss";
+
 const MarqueeSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.marquee}>

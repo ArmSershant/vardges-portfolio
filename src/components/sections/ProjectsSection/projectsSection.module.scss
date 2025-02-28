@@ -1,5 +1,6 @@
 @use "../../../assets/styles/colors.scss" as *;
 @use "../../../assets/styles/global.scss" as *;
+
 .projects {
     @extend .container;
     background: $deep-ocean-gradient;

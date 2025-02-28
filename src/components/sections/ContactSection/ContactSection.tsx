@@ -1,4 +1,5 @@
 import { sectionProps } from "../../../utils/types/types";
+import Icon from "../../molecules/Icon/Icon";
 import styles from "./contactSection.module.scss";
 
 const ContactSection = (props: sectionProps) => {
@@ -28,6 +29,11 @@ const ContactSection = (props: sectionProps) => {
             <div className={styles.contact_wrapper_info_contact_number}>
               <p>Number</p>
               <a href="Tel:+37496804036">+374 96 80 40 36</a>
+            </div>
+            <div className={styles.contact_wrapper_info_contact_links}>
+            <Icon fb/>
+            <Icon gh/>
+            <Icon ln/>
             </div>
           </div>
         </div>
