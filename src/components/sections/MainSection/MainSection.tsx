@@ -1,20 +1,38 @@
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import vardges from "../../../assets/images/vardges.png";
 import { scrolling } from "../../../utils/functions/scrolling";
+import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
 import Icon from "../../molecules/Icon/Icon";
 import styles from "./mainSection.module.scss";
-import vardges from "../../../assets/images/vardges.png";
 
 const MainSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.main}>
       <div className={styles.main_wrapper}>
-        <div className={styles.main_wrapper_info}>
-          <div className={styles.main_wrapper_info_name}>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className={styles.main_wrapper_info}
+        >
+          <motion.div
+            transition={{ ...springTransition, delay: 0.2 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0 }}
+            className={styles.main_wrapper_info_name}
+          >
             <p>Vardges Movsesyan</p>
-          </div>
-          <div className={styles.main_wrapper_info_profession}>
+          </motion.div>
+          <motion.div
+            transition={{ ...springTransition, delay: 0.3 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0 }}
+            className={styles.main_wrapper_info_profession}
+          >
             <p>Hey! I'm Vardges</p>
             <p>
               <Typewriter
@@ -27,8 +45,13 @@ const MainSection = (props: sectionProps) => {
                 delaySpeed={2500}
               />
             </p>
-          </div>
-          <div className={styles.main_wrapper_info_saying}>
+          </motion.div>
+          <motion.div
+            transition={{ ...springTransition, delay: 0.4 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0 }}
+            className={styles.main_wrapper_info_saying}
+          >
             <p>
               <Typewriter
                 words={[
@@ -37,8 +60,13 @@ const MainSection = (props: sectionProps) => {
                 typeSpeed={50}
               />
             </p>
-          </div>
-          <div className={styles.main_wrapper_info_contacts}>
+          </motion.div>
+          <motion.div
+            transition={{ ...springTransition, delay: 0.5 }}
+            initial={{ y: 50 }}
+            whileInView={{ y: 0 }}
+            className={styles.main_wrapper_info_contacts}
+          >
             <a
               className={styles.main_wrapper_info_contacts_contactLink}
               onClick={(e) => scrolling(e, "contact")}
@@ -50,11 +78,17 @@ const MainSection = (props: sectionProps) => {
               <Icon gh />
               <Icon ln />
             </div>
-          </div>
-        </div>
-        <div className={styles.main_wrapper_image}>
+          </motion.div>
+        </motion.div>
+        <motion.div
+          transition={{ ...springTransition, delay: 0.8 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className={styles.main_wrapper_image}
+        >
           <img src={vardges} alt="vardges" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

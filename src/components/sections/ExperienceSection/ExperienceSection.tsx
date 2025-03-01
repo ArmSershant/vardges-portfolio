@@ -1,16 +1,24 @@
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
-import styles from "./experienceSection.module.scss";
 import ExperienceBox from "../../molecules/ExperienceBox/ExperienceBox";
+import styles from "./experienceSection.module.scss";
 
 const ExperienceSection = (props: sectionProps) => {
   return (
     <div id={props.id} className={styles.experience}>
       <div className={styles.experience_wrapper}>
         <div className={styles.experience_wrapper_info}>
-          <div className={styles.experience_wrapper_info_title}>
+          <motion.div
+            transition={springTransition}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.experience_wrapper_info_title}
+          >
             <p>Experience</p>
-          </div>
+          </motion.div>
           <div className={styles.experience_wrapper_info_providing}>
             <p>
               <Typewriter
@@ -25,7 +33,13 @@ const ExperienceSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <div className={styles.experience_wrapper_experienceBoxes}>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={styles.experience_wrapper_experienceBoxes}
+        >
           <ExperienceBox
             position="Svelte Developer"
             location="Remote"
@@ -53,7 +67,7 @@ const ExperienceSection = (props: sectionProps) => {
             description="Upwork is a global freelancing platform that connects businesses with independent professionals and agencies. It provides a wide range of job opportunities in fields like software development, design, writing, marketing, and more. As a Full-Stack Developer on Upwork, I collaborate with clients on various projects, delivering high-quality solutions tailored to their needs. This role allows me to work with diverse technologies, solve unique challenges, and build strong professional relationships across industries."
             jobUrl="https://upwork.com"
           />
-        </div>
+        </motion.div>
       </div>
     </div>
   );

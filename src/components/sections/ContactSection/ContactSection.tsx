@@ -1,18 +1,39 @@
+import hacker from "../../../assets/images/hacker2.png";
+import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
 import Icon from "../../molecules/Icon/Icon";
 import styles from "./contactSection.module.scss";
-import hacker from "../../../assets/images/hacker2.png";
+import { motion } from "framer-motion";
 
 const ContactSection = (props: sectionProps) => {
   return (
-    <div id={props.id} className={styles.contact}>
+    <motion.div
+      transition={springTransition}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      id={props.id}
+      className={styles.contact}
+    >
       <div className={styles.contact_wrapper}>
-        <div className={styles.contact_wrapper_image}>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className={styles.contact_wrapper_image}
+        >
           <div className={styles.contact_wrapper_image_wrapper}>
             <img src={hacker} alt="hacker" />
           </div>
-        </div>
-        <div className={styles.contact_wrapper_info}>
+        </motion.div>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className={styles.contact_wrapper_info}
+        >
           <div className={styles.contact_wrapper_info_text}>
             <p className={styles.contact_wrapper_info_text_title}>
               Let's discuss your project
@@ -39,9 +60,9 @@ const ContactSection = (props: sectionProps) => {
               <Icon ln />
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

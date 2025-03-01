@@ -1,16 +1,32 @@
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { sectionProps } from "../../../utils/types/types";
-import styles from "./projectsSection.module.scss";
-import ProjectBox from "../../molecules/ProjectBox/ProjectBox";
 import { project1, project2, project3 } from "../../../utils/projects";
+import { springTransition } from "../../../utils/transitions";
+import { sectionProps } from "../../../utils/types/types";
+import ProjectBox from "../../molecules/ProjectBox/ProjectBox";
+import styles from "./projectsSection.module.scss";
+
 const ProjectsSection = (props: sectionProps) => {
   return (
-    <div id={props.id} className={styles.projects}>
+    <motion.div
+      transition={springTransition}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      id={props.id}
+      className={styles.projects}
+    >
       <div className={styles.projects_wrapper}>
         <div className={styles.projects_wrapper_info}>
-          <div className={styles.projects_wrapper_info_title}>
+          <motion.div
+            transition={springTransition}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.projects_wrapper_info_title}
+          >
             <p>PROJECTS</p>
-          </div>
+          </motion.div>
           <div className={styles.projects_wrapper_info_providing}>
             <p>
               <Typewriter
@@ -25,13 +41,19 @@ const ProjectsSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <div className={styles.projects_wrapper_projectBoxes}>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={styles.projects_wrapper_projectBoxes}
+        >
           <ProjectBox {...project1} />
           <ProjectBox {...project2} />
           <ProjectBox {...project3} />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

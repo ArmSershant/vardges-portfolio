@@ -1,10 +1,12 @@
+import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import hacker from "../../../assets/images/hacker.png";
 import { scrolling } from "../../../utils/functions/scrolling";
+import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
-import styles from "./aboutMeSection.module.scss";
 import CircleEffect from "../../molecules/CircleEffect/CircleEffect";
-import hacker from "../../../assets/images/hacker.png";
+import styles from "./aboutMeSection.module.scss";
 
 const AboutMeSection = (props: sectionProps) => {
   return (
@@ -17,12 +19,24 @@ const AboutMeSection = (props: sectionProps) => {
           scale={"2"}
           rotateDirection="left"
         />
-        <div className={styles.aboutMe_wrapper_image}>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, x: -200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className={styles.aboutMe_wrapper_image}
+        >
           <div className={styles.aboutMe_wrapper_image_wrapper}>
             <img src={hacker} alt="hacker" />
           </div>
-        </div>
-        <div className={styles.aboutMe_wrapper_info}>
+        </motion.div>
+        <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, x: 200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          className={styles.aboutMe_wrapper_info}
+        >
           <div className={styles.aboutMe_wrapper_info_title}>
             <p>ABOUT ME</p>
           </div>
@@ -90,7 +104,7 @@ const AboutMeSection = (props: sectionProps) => {
               <Button arrow={true}>GET IN TOUCH</Button>
             </a>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

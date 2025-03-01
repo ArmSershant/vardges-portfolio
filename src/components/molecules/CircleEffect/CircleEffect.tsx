@@ -1,6 +1,8 @@
+import { motion, MotionStyle } from "framer-motion";
+import circle from "../../../assets/effects/circle.svg";
+import { springTransition } from "../../../utils/transitions";
 import { CircleEffectProps } from "../../../utils/types/types";
 import styles from "./circleEffect.module.scss";
-import circle from "../../../assets/effects/circle.svg"
 
 const CircleEffect = ({
   top,
@@ -11,7 +13,15 @@ const CircleEffect = ({
   rotateDirection = "right",
 }: CircleEffectProps) => {
   return (
-    <div
+    <motion.div
+      transition={springTransition}
+      initial={{
+        opacity: 0,
+        scale: 0,
+        x: rotateDirection === "right" ? 50 : -50,
+      }}
+      whileInView={{ opacity: 1, scale: scale, x: 0 }}
+      viewport={{ once: true }}
       className={`${styles.effect} ${
         rotateDirection === "right" ? styles.rotateRight : styles.rotateLeft
       }`}
@@ -22,11 +32,11 @@ const CircleEffect = ({
           right: right,
           bottom: bottom,
           "--scale": scale,
-        } as never
+        } as MotionStyle | undefined
       }
     >
       <img src={circle} alt="circle effect" />
-    </div>
+    </motion.div>
   );
 };
 
