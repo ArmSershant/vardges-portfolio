@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import icons from "../../../utils/icons";
+import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
 import styles from "./marqueeSection.module.scss";
-import { motion } from "framer-motion";
-import { springTransition } from "../../../utils/transitions";
 
 const MarqueeSection = (props: sectionProps) => {
   return (
@@ -15,10 +15,15 @@ const MarqueeSection = (props: sectionProps) => {
       id={props.id}
       className={styles.marquee}
     >
-      <Marquee>
+      <Marquee pauseOnHover={true}>
         <div className={styles.marquee_wrapper}>
           {icons.map((icon, index) => (
-            <img key={index} src={icon} alt={icon} />
+            <div className={styles.marquee_wrapper_content}>
+              <a target="_blank" href={icon.url}>
+                <img key={index} src={icon.img} alt={icon.name} />
+                <p>{icon.name}</p>
+              </a>
+            </div>
           ))}
         </div>
       </Marquee>

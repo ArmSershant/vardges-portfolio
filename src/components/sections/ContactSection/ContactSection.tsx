@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import hacker from "../../../assets/images/hacker2.png";
 import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
 import Icon from "../../molecules/Icon/Icon";
 import styles from "./contactSection.module.scss";
-import { motion } from "framer-motion";
 
 const ContactSection = (props: sectionProps) => {
   return (
