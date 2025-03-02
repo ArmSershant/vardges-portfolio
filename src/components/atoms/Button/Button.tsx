@@ -6,7 +6,7 @@ const Button = ({
   arrow,
   children,
 }: {
-  myClick?: (e?: any) => void;
+  myClick?: (e?: React.MouseEvent<HTMLDivElement>) => void;
   arrow?: boolean;
   children?: string;
 }) => {

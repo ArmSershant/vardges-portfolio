@@ -5,6 +5,8 @@
     &_navigation {
         display: flex;
         flex-direction: column;
+        position: relative;
+        z-index: 9998;
         &_close {
             font-size: 1.375em;
             font-weight: bold;

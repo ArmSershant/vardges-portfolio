@@ -1,13 +1,18 @@
+import { useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
 import Button from "../../atoms/Button/Button";
 import styles from "./burgerMenu.module.scss";
+import { BurgerMenuProps } from "../../../utils/types/types";
 
 const BurgerMenu = ({
   menuOpen,
   setMenuOpen,
   handleClick,
   activeLink,
-}: any) => {
+}: BurgerMenuProps) => {
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+  }, [menuOpen]);
   return (
     <Menu
       noOverlay
@@ -20,11 +25,12 @@ const BurgerMenu = ({
       disableOverlayClick
       styles={{
         bmMenuWrap: {
-          position: "absolute",
+          position: "fixed",
           width: "100vw",
           height: "100vh",
-          zIndex: "9999",
+          zIndex: "9998",
           top: "0",
+          left: "0",
         },
         bmMenu: {
           background: "linear-gradient(to right, #07233b, #040c16)",
@@ -33,6 +39,8 @@ const BurgerMenu = ({
           display: "flex",
           justifyContent: "flexStart",
           alignItems: "center",
+          position: "relative",
+          zIndex: "9999",
         },
         bmItemList: {
           display: "flex",
@@ -42,7 +50,8 @@ const BurgerMenu = ({
           gap: "1.5rem",
         },
         bmOverlay: {
-          zIndex: "9998",
+          position: "relative",
+          zIndex: "9997",
         },
       }}
     >
