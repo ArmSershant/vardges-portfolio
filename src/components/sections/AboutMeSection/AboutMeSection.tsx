@@ -44,7 +44,7 @@ const AboutMeSection = (props: sectionProps) => {
             <p>I AM AVAILABLE FOR </p>
             <p>
               <Typewriter
-                words={["FULL STACK PROJECTS", "FULL STACK PROJECTS"]}
+                words={["WEB PROJECTS", "GAME PROJECTS", "DESIGN PROJECTS"]}
                 loop={true}
                 cursor
                 cursorStyle="|"
