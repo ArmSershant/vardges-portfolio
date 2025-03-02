@@ -7,6 +7,7 @@
     padding-top: 240px;
     height: 100vmin;
     &_wrapper {
+        padding: 1rem 0.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -46,6 +47,7 @@
             }
             &_contacts {
                 display: flex;
+                align-items: center;
                 gap: 1.5rem;
                 > div {
                     display: flex;
@@ -62,6 +64,68 @@
             > img {
                 filter: drop-shadow(3.5px 3.5px 5px $light-navy);
                 height: 675px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1320px) {
+    .main {
+        padding-top: 170px;
+        &_wrapper {
+            padding-block: unset;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .main {
+        padding-inline: unset;
+        &_wrapper {
+            gap: 1rem;
+            &_image {
+                display: none;
+            }
+            &_info {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                &_name {
+                    > p {
+                        font-size: 0.8em;
+                    }
+                }
+                &_profession {
+                    > p {
+                        font-size: 3em;
+                    }
+                }
+                &_saying {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        padding-top: unset;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .main {
+        &_wrapper {
+            &_info {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                &_contacts {
+                    flex-direction: column;
+                }
             }
         }
     }

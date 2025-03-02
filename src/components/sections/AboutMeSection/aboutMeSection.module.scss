@@ -147,15 +147,8 @@
     .aboutMe {
         height: auto;
         &_wrapper {
-            // flex-direction: column;
-            // align-items: center;
             &_image {
                 width: 100%;
-                &_wrapper {
-                    > img {
-                        // max-height: 300px;
-                    }
-                }
             }
             &_info {
                 width: 100%;
@@ -163,7 +156,6 @@
                 text-align: center;
                 &_reviews {
                     width: 100%;
-                    // flex-direction: column;
                     align-items: center;
                 }
             }
