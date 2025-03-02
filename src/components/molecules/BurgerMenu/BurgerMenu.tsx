@@ -1,0 +1,84 @@
+import { slide as Menu } from "react-burger-menu";
+import Button from "../../atoms/Button/Button";
+import styles from "./burgerMenu.module.scss";
+
+const BurgerMenu = ({
+  menuOpen,
+  setMenuOpen,
+  handleClick,
+  activeLink,
+}: any) => {
+  return (
+    <Menu
+      noOverlay
+      right
+      isOpen={menuOpen}
+      onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
+      className={styles.burger}
+      customCrossIcon={false}
+      customBurgerIcon={false}
+      disableOverlayClick
+      styles={{
+        bmMenuWrap: {
+          position: "absolute",
+          width: "100vw",
+          height: "100vh",
+          zIndex: "9999",
+          top: "0",
+        },
+        bmMenu: {
+          background: "linear-gradient(to right, #07233b, #040c16)",
+          padding: "2.5rem 1.5rem",
+          fontSize: "1.5em",
+          display: "flex",
+          justifyContent: "flexStart",
+          alignItems: "center",
+        },
+        bmItemList: {
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "flexStart",
+          alignItems: "center",
+          gap: "1.5rem",
+        },
+        bmOverlay: {
+          zIndex: "9998",
+        },
+      }}
+    >
+      <div className={styles.burger_navigation}>
+        <span
+          className={styles.burger_navigation_close}
+          onClick={() => setMenuOpen(false)}
+        >
+          X
+        </span>
+        <div className={styles.burger_navigation_links}>
+          {[
+            "home",
+            "about",
+            "projects",
+            "services",
+            "experience",
+            "contact",
+          ].map((section) => (
+            <a
+              key={section}
+              onClick={(e) => handleClick(e, section)}
+              className={
+                activeLink === section ? styles.active : styles.inactive
+              }
+            >
+              {section.charAt(0).toUpperCase() + section.slice(1)}
+            </a>
+          ))}
+        </div>
+        <div className={styles.burger_navigation_letsTalk}>
+          <Button myClick={(e) => handleClick(e, "contact")}>Let's Talk</Button>
+        </div>
+      </div>
+    </Menu>
+  );
+};
+
+export default BurgerMenu;

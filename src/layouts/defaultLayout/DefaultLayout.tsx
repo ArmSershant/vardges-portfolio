@@ -22,7 +22,7 @@ const DefaultLayout = () => {
       <Dot />
       <Navbar />
       <MainSection id={"home"} />
-      <MarqueeSection id={"maruqee"} />
+      <MarqueeSection />
       <AboutMeSection id={"about"} />
       <ProjectsSection id={"projects"} />
       <ServicesSection id={"services"} />

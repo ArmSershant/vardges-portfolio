@@ -1,0 +1,43 @@
+@use "../../../assets/styles/colors.scss" as *;
+@use "../../../assets/styles/global.scss" as *;
+
+.burger {
+    &_navigation {
+        display: flex;
+        flex-direction: column;
+        &_close {
+            font-size: 1.375em;
+            font-weight: bold;
+            margin-bottom: 1.25rem;
+            display: flex;
+        }
+        &_links {
+            display: flex;
+            flex-direction: column;
+            padding: 0 3.125rem 0 0;
+            margin: 0 0 0 auto;
+            gap: 1.25rem;
+            > a {
+                color: $light-gray;
+                font-size: 0.875em;
+                padding: 0.5rem 0;
+                height: fit-content;
+                letter-spacing: 1px;
+            }
+        }
+        &_letsTalk {
+            margin-top: 1.25rem;
+        }
+        &_contactLink {
+            font-size: 1em;
+        }
+    }
+}
+
+.active {
+    @extend .active_underline;
+}
+
+.inactive {
+    @extend .inactive_underline;
+}

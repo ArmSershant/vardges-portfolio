@@ -6,7 +6,7 @@ const Button = ({
   arrow,
   children,
 }: {
-  myClick?: () => void;
+  myClick?: (e?: any) => void;
   arrow?: boolean;
   children?: string;
 }) => {
