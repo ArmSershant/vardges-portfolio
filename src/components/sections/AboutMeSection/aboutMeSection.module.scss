@@ -5,6 +5,8 @@
     @extend .container;
     background: $navy-gradient;
     height: 100vmin;
+    padding: 1rem;
+
     &_wrapper {
         display: flex;
         justify-content: center;
@@ -23,7 +25,7 @@
                 border-radius: 2rem;
                 border: 0.5px solid hsla(0, 0%, 100%, 0.1);
                 > img {
-                    height: 500px;
+                    max-height: 500px;
                 }
             }
         }
@@ -82,6 +84,88 @@
             &_getInTouch {
                 display: flex;
                 gap: 1.5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutMe {
+        height: auto;
+        padding: 2rem 0.5rem;
+        &_wrapper {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            &_image {
+                &_wrapper {
+                    display: flex;
+                    justify-content: center;
+                    > img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            &_info {
+                z-index: 1;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                &_reviews {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    margin: auto;
+                    align-items: center;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutMe {
+        &_wrapper {
+            &_image {
+                &_wrapper {
+                    > img {
+                        width: 85%;
+                        height: 85%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutMe {
+        height: auto;
+        &_wrapper {
+            // flex-direction: column;
+            // align-items: center;
+            &_image {
+                width: 100%;
+                &_wrapper {
+                    > img {
+                        // max-height: 300px;
+                    }
+                }
+            }
+            &_info {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                &_reviews {
+                    width: 100%;
+                    // flex-direction: column;
+                    align-items: center;
+                }
             }
         }
     }

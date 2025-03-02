@@ -18,9 +18,9 @@ const MarqueeSection = (props: sectionProps) => {
       <Marquee pauseOnHover={true}>
         <div className={styles.marquee_wrapper}>
           {icons.map((icon, index) => (
-            <div className={styles.marquee_wrapper_content}>
+            <div key={index} className={styles.marquee_wrapper_content}>
               <a target="_blank" href={icon.url}>
-                <img key={index} src={icon.img} alt={icon.name} />
+                <img  src={icon.img} alt={icon.name} />
                 <p>{icon.name}</p>
               </a>
             </div>

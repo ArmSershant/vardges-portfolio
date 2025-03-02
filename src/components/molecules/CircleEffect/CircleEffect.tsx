@@ -17,10 +17,9 @@ const CircleEffect = ({
       transition={springTransition}
       initial={{
         opacity: 0,
-        scale: 0,
         x: rotateDirection === "right" ? 50 : -50,
       }}
-      whileInView={{ opacity: 1, scale: scale, x: 0 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
       className={`${styles.effect} ${
         rotateDirection === "right" ? styles.rotateRight : styles.rotateLeft
