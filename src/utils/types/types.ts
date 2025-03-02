@@ -47,6 +47,7 @@ export interface ModalProps {
 export type BurgerMenuProps = {
   menuOpen: boolean;
   setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  handleClick: (e: React.MouseEvent | undefined, section: string) => void | undefined;
+  handleClick: (e: React.MouseEvent, section: string) => void;
   activeLink: string;
 };
+

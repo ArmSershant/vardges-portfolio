@@ -83,7 +83,7 @@ const BurgerMenu = ({
           ))}
         </div>
         <div className={styles.burger_navigation_letsTalk}>
-          <Button myClick={(e) => handleClick(e, "contact")}>Let's Talk</Button>
+          <Button myClick={(e) => e && handleClick(e, "contact")}>Let's Talk</Button>
         </div>
       </div>
     </Menu>

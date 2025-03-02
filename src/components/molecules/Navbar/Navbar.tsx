@@ -20,6 +20,7 @@ const Navbar = () => {
   }, []);
 
   const handleClick = (e: React.MouseEvent, section: string) => {
+    e?.preventDefault();
     setActiveLink(section);
     scrolling(e, section);
     setMenuOpen(false);
