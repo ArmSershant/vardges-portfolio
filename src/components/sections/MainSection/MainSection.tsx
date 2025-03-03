@@ -23,6 +23,7 @@ const MainSection = (props: sectionProps) => {
             transition={{ ...springTransition, delay: 0.2 }}
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
+            viewport={{ once: true }}
             className={styles.main_wrapper_info_name}
           >
             <p>Vardges Movsesyan</p>
@@ -31,6 +32,7 @@ const MainSection = (props: sectionProps) => {
             transition={{ ...springTransition, delay: 0.3 }}
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
+            viewport={{ once: true }}
             className={styles.main_wrapper_info_profession}
           >
             <p>Hey! I'm Vardges</p>
@@ -50,6 +52,7 @@ const MainSection = (props: sectionProps) => {
             transition={{ ...springTransition, delay: 0.4 }}
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
+            viewport={{ once: true }}
             className={styles.main_wrapper_info_saying}
           >
             <p>
@@ -65,6 +68,7 @@ const MainSection = (props: sectionProps) => {
             transition={{ ...springTransition, delay: 0.5 }}
             initial={{ y: 50 }}
             whileInView={{ y: 0 }}
+            viewport={{ once: true }}
             className={styles.main_wrapper_info_contacts}
           >
             <a
