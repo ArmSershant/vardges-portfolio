@@ -2,7 +2,7 @@ import facebook from "../../../assets/icons/social/facebook.svg";
 import fiverr from "../../../assets/icons/social/fiverr.svg";
 import github from "../../../assets/icons/social/github.svg";
 import linkedin from "../../../assets/icons/social/linkedin.svg";
-import live from "../../../assets/icons/social/live.svg";
+import live from "../../../assets/icons/social/live.png";
 import styles from "./icon.module.scss";
 
 const Icon = ({
