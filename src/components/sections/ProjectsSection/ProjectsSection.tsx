@@ -54,17 +54,6 @@ const ProjectsSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        {/* <motion.div
-          transition={springTransition}
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className={styles.projects_wrapper_projectBoxes}
-        >
-          {projects.map((project, index) => {
-            return <ProjectBox {...project} key={index} />
-          })}
-        </motion.div> */}
         <motion.div
           transition={springTransition}
           initial={{ opacity: 0, y: 100 }}

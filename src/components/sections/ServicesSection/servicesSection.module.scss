@@ -4,13 +4,14 @@
 .services {
     @extend .container;
     background: $navy-gradient;
-    height: 100vmin;
+    height: 100vh;
     &_wrapper {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         margin: auto;
+        padding: 1rem 0.5rem;
         width: 100%;
         gap: 5rem;
         max-width: 1320px;
@@ -43,8 +44,48 @@
         &_serviceBoxes {
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
             gap: 2rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .services {
+        &_wrapper {
+            align-items: center;
+            gap: 1rem;
+            &_info {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                &_title {
+                    > p {
+                        font-size: 0.8em;
+                    }
+                }
+                &_providing {
+                    > p {
+                        font-size: 2em;
+                    }
+                }
+            }
+            &_serviceBoxes {
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        &_wrapper {
+            &_serviceBoxes {
+                flex-wrap: wrap;
+            }
         }
     }
 }

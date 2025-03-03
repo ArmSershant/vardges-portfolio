@@ -54,6 +54,7 @@
 @media (max-width: 1024px) {
     .projects {
         &_wrapper {
+            gap: 1rem;
             &_info {
                 width: 100%;
                 justify-content: center;

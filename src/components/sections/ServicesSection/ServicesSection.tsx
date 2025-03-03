@@ -45,25 +45,25 @@ const ServicesSection = (props: sectionProps) => {
             icon={serviceIcons.icon1}
             image={serviceImages.service1}
             title="Web Design"
-            description="Creating modern, user-friendly, and responsive designs."
+            description="Creating modern, user-friendly & responsive designs."
           />
           <ServiceBox
             icon={serviceIcons.icon2}
             image={serviceImages.service2}
             title="Web Development"
-            description="Building fast, scalable, and feature-rich websites."
+            description="Building fast, scalable & feature-rich websites."
           />
           <ServiceBox
             icon={serviceIcons.icon3}
             image={serviceImages.service3}
             title="SEO Marketing"
-            description="Boosting search rankings and website performance."
+            description="Boosting search rankings & website performance."
           />
           <ServiceBox
             icon={serviceIcons.icon4}
             image={serviceImages.service4}
             title="Graphic Design"
-            description="Designing logos, banners, and branding visuals."
+            description="Designing logos, banners & branding visuals."
           />
         </motion.div>
       </div>
