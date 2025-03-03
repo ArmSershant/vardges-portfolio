@@ -1,0 +1,66 @@
+@import "../../../assets/styles/colors";
+
+.scroll {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    border-radius: 0.625rem;
+    background: $deep-ocean-gradient;
+    border: none;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 3;
+    width: 4rem;
+    height: 3rem;
+
+    &_buttonImg {
+        width: 50%;
+        height: 50%;
+        transition: transform 0.5s;
+    }
+
+    &:hover {
+        background: $deep-blue;
+        .scroll_buttonImg {
+            animation: scroll-up-animation 0.5s linear;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        right: 1rem;
+    }
+    @media (max-width: 768px) {
+        width: 3rem;
+        height: 2.5rem;
+        right: 1rem;
+    }
+    @media (max-width: 480px) {
+        width: 3rem;
+        right: 1rem;
+    }
+
+    @keyframes scroll-up-animation {
+        0% {
+            transform: translateY(-1rem);
+            opacity: 0.5;
+        }
+        25% {
+            transform: translateY(-2rem);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(2rem);
+            opacity: 0;
+        }
+        75% {
+            transform: translateY(1rem);
+            opacity: 0.5;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 0;
+        }
+    }
+}

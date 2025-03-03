@@ -10,6 +10,7 @@ import MainSection from "../../components/sections/MainSection/MainSection";
 import MarqueeSection from "../../components/sections/MarqueeSection/MarqueeSection";
 import ProjectsSection from "../../components/sections/ProjectsSection/ProjectsSection";
 import ServicesSection from "../../components/sections/ServicesSection/ServicesSection";
+import ScrollButton from "../../components/atoms/ScrollButton/ScrollButton";
 
 const DefaultLayout = () => {
   useEffect(() => {
@@ -20,6 +21,7 @@ const DefaultLayout = () => {
     <>
       <ProgressBar />
       <Dot />
+      <ScrollButton/>
       <Navbar />
       <MainSection id={"home"} />
       <MarqueeSection />
