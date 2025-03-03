@@ -72,3 +72,120 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .contact {
+        &_wrapper {
+            height: 100%;
+            border: none;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem 0.5rem;
+            gap: 5rem;
+            &_image {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &_wrapper {
+                    > img {
+                        width: 300px;
+                        height: 300px;
+                    }
+                }
+            }
+            &_info {
+                align-items: center;
+                text-align: center;
+                gap: 1.5rem;
+                &_text {
+                    &_title {
+                        font-size: 2em;
+                    }
+                    &_description {
+                        font-size: 1em;
+                    }
+                }
+                &_contact {
+                    align-items: center;
+                    &_email,
+                    &_number {
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .contact {
+        &_wrapper {
+            padding: 1.5rem;
+            &_image {
+                &_wrapper {
+                    > img {
+                        width: 250px;
+                        height: 250px;
+                    }
+                }
+            }
+            &_info {
+                gap: 1rem;
+                &_text {
+                    &_title {
+                        font-size: 1.75em;
+                    }
+                    &_description {
+                        font-size: 0.95em;
+                    }
+                }
+                &_contact {
+                    &_email,
+                    &_number {
+                        :nth-child(2) {
+                            font-size: 1.25em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        &_wrapper {
+            padding: 1rem;
+            &_image {
+                &_wrapper {
+                    > img {
+                        width: 200px;
+                        height: 200px;
+                    }
+                }
+            }
+            &_info {
+                gap: 0.75rem;
+                &_text {
+                    &_title {
+                        font-size: 1.5em;
+                    }
+                    &_description {
+                        font-size: 0.875em;
+                    }
+                }
+                &_contact {
+                    &_email,
+                    &_number {
+                        :nth-child(2) {
+                            font-size: 1.1em;
+                        }
+                    }
+                    &_links {
+                        gap: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
+}
