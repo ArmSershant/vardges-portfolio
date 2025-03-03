@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+import { springTransition } from "../../../utils/transitions";
 import { ExperienceBoxProps } from "../../../utils/types/types";
 import styles from "./experienceBox.module.scss";
 
@@ -11,7 +13,13 @@ const ExperienceBox = ({
   jobUrl,
 }: ExperienceBoxProps) => {
   return (
-    <div className={styles.experienceBox}>
+    <motion.div
+      transition={springTransition}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      className={styles.experienceBox}
+    >
       <div className={styles.experienceBox_wrapper}>
         <div className={styles.experienceBox_wrapper_job}>
           <p className={styles.experienceBox_wrapper_job_position}>
@@ -40,7 +48,7 @@ const ExperienceBox = ({
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

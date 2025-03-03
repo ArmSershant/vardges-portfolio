@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import { useState } from "react";
 // @ts-expect-error swiper
 import "swiper/css";
-import { useState } from "react";
 // @ts-expect-error swiper
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
@@ -54,13 +54,7 @@ const ProjectsSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <motion.div
-          transition={springTransition}
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className={styles.projects_wrapper_projectBoxes}
-        >
+        <div className={styles.projects_wrapper_projectBoxes}>
           <Swiper
             breakpoints={{
               320: { slidesPerView: 1 },
@@ -98,7 +92,7 @@ const ProjectsSection = (props: sectionProps) => {
               onClose={() => setSelectedProject(null)}
             />
           )}
-        </motion.div>
+        </div>
       </div>
     </motion.div>
   );

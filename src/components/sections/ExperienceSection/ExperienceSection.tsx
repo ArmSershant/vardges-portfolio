@@ -33,11 +33,7 @@ const ExperienceSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <motion.div
-          transition={springTransition}
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+        <div
           className={styles.experience_wrapper_experienceBoxes}
         >
           <ExperienceBox
@@ -67,7 +63,7 @@ const ExperienceSection = (props: sectionProps) => {
             description="Upwork is a global freelancing platform that connects businesses with independent professionals and agencies. It provides a wide range of job opportunities in fields like software development, design, writing, marketing, and more. As a Full-Stack Developer on Upwork, I collaborate with clients on various projects, delivering high-quality solutions tailored to their needs. This role allows me to work with diverse technologies, solve unique challenges, and build strong professional relationships across industries."
             jobUrl="https://upwork.com"
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );

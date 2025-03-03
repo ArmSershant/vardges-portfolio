@@ -34,13 +34,7 @@ const ServicesSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
-        <motion.div
-          transition={springTransition}
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className={styles.services_wrapper_serviceBoxes}
-        >
+        <div className={styles.services_wrapper_serviceBoxes}>
           <ServiceBox
             icon={serviceIcons.icon1}
             image={serviceImages.service1}
@@ -65,7 +59,7 @@ const ServicesSection = (props: sectionProps) => {
             title="Graphic Design"
             description="Designing logos, banners & branding visuals."
           />
-        </motion.div>
+        </div>
       </div>
     </div>
   );
