@@ -1,12 +1,25 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
-import { project1, project2, project3 } from "../../../utils/projects";
+// @ts-expect-error swiper
+import "swiper/css";
+import { useState } from "react";
+// @ts-expect-error swiper
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { springTransition } from "../../../utils/transitions";
-import { sectionProps } from "../../../utils/types/types";
+import { Project, sectionProps } from "../../../utils/types/types";
+import Modal from "../../atoms/Modal/Modal";
 import ProjectBox from "../../molecules/ProjectBox/ProjectBox";
+import { projects } from "./../../../utils/projects";
 import styles from "./projectsSection.module.scss";
 
 const ProjectsSection = (props: sectionProps) => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const handleOpenModal = (project: Project) => {
+    setSelectedProject(project);
+  };
   return (
     <motion.div
       transition={springTransition}
@@ -41,6 +54,17 @@ const ProjectsSection = (props: sectionProps) => {
             </p>
           </div>
         </div>
+        {/* <motion.div
+          transition={springTransition}
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={styles.projects_wrapper_projectBoxes}
+        >
+          {projects.map((project, index) => {
+            return <ProjectBox {...project} key={index} />
+          })}
+        </motion.div> */}
         <motion.div
           transition={springTransition}
           initial={{ opacity: 0, y: 100 }}
@@ -48,9 +72,43 @@ const ProjectsSection = (props: sectionProps) => {
           viewport={{ once: true }}
           className={styles.projects_wrapper_projectBoxes}
         >
-          <ProjectBox {...project1} />
-          <ProjectBox {...project2} />
-          <ProjectBox {...project3} />
+          <Swiper
+            breakpoints={{
+              320: { slidesPerView: 1 },
+              768: { slidesPerView: 2, spaceBetween: 20 },
+              1024: { slidesPerView: 3, spaceBetween: 30 },
+            }}
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay
+            rewind={true}
+            navigation={true}
+            modules={[Autoplay, Pagination]}
+            className={styles.projects_wrapper_projectBoxes_wrapper}
+          >
+            {projects.map((project, index) => {
+              return (
+                <SwiperSlide
+                  key={index}
+                  className={styles.projects_wrapper_projectBoxes_wrapper_slide}
+                >
+                  <ProjectBox
+                    {...project}
+                    onOpenModal={() => handleOpenModal(project)}
+                  />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+          {selectedProject && (
+            <Modal
+              project={selectedProject}
+              onClose={() => setSelectedProject(null)}
+            />
+          )}
         </motion.div>
       </div>
     </motion.div>

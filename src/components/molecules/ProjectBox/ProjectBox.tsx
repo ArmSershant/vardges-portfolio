@@ -1,20 +1,12 @@
-import { useState } from "react";
-import { Project } from "../../../utils/types/types";
+import { ProjectBoxProps } from "../../../utils/types/types";
 import Button from "../../atoms/Button/Button";
-import Modal from "../../atoms/Modal/Modal";
 import styles from "./projectBox.module.scss";
 
-const ProjectBox = ({ ...project }: Project) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleOpenModal = () => {
-    setIsOpen(true);
-  };
-
+const ProjectBox = ({ onOpenModal, ...project }: ProjectBoxProps) => {
   return (
     <>
       <div className={styles.projectBox}>
-        <img src={project.photoURL} alt={project.title} />
+        <img src={project.photoURL} alt={project.title} onClick={onOpenModal} />
         <div className={styles.projectBox_infoWrapper}>
           <div className={styles.projectBox_infoWrapper_info}>
             <p className={styles.projectBox_infoWrapper_info_title}>
@@ -24,10 +16,9 @@ const ProjectBox = ({ ...project }: Project) => {
               {project.type}
             </p>
           </div>
-          <Button arrow myClick={handleOpenModal} />
+          <Button arrow myClick={onOpenModal} />
         </div>
       </div>
-      {isOpen && <Modal project={project} onClose={() => setIsOpen(false)} />}
     </>
   );
 };

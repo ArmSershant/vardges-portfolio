@@ -2,16 +2,24 @@
 @use "../../../assets/styles/global.scss" as *;
 
 .button {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    gap: 0.5rem;
     border: 1px solid transparent;
     border-radius: 2.5rem;
     background: $bright-blue;
     padding: 0.813rem 1.875rem;
-    text-align: center;
-    align-items: center;
     font-size: 1em;
     white-space: nowrap;
     > img {
+        position: inherit;
+        z-index: 1;
         width: 0.75rem;
+        height: fit-content;
         transform: rotate(90deg);
     }
     &:hover {

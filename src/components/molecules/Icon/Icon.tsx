@@ -1,36 +1,62 @@
-import styles from "./icon.module.scss";
 import facebook from "../../../assets/icons/social/facebook.svg";
+import fiverr from "../../../assets/icons/social/fiverr.svg";
 import github from "../../../assets/icons/social/github.svg";
 import linkedin from "../../../assets/icons/social/linkedin.svg";
+import live from "../../../assets/icons/social/live.svg";
+import styles from "./icon.module.scss";
 
-const Icon = ({ fb, gh, ln }: { fb?: boolean; gh?: boolean; ln?: boolean }) => {
+const Icon = ({
+  fb,
+  gh,
+  ln,
+  fv,
+  lv,
+  link,
+}: {
+  fb?: boolean;
+  gh?: boolean;
+  ln?: boolean;
+  fv?: boolean;
+  lv?: boolean;
+  link?: string;
+}) => {
   return (
     <div className={styles.icon}>
       {fb && (
         <a
-          className={styles.icon_facebook}
           target="_blank"
-          href="https://www.facebook.com/ArmSershant"
+          href={link ? link : "https://www.facebook.com/ArmSershant"}
         >
           <img src={facebook} alt="fb-icon" />
         </a>
       )}
       {gh && (
         <a
-          className={styles.icon_github}
           target="_blank"
-          href="https://github.com/ArmSershant"
+          href={link ? link : "https://github.com/ArmSershant"}
         >
           <img src={github} alt="gh-icon" />
         </a>
       )}
       {ln && (
         <a
-          className={styles.icon_linkedin}
           target="_blank"
-          href="https://www.linkedin.com/in/vardges-movsesyan/"
+          href={link ? link : "https://www.linkedin.com/in/vardges-movsesyan/"}
         >
           <img src={linkedin} alt="ln-icon" />
+        </a>
+      )}
+      {fv && (
+        <a
+          target="_blank"
+          href={link ? link : "https://www.fiverr.com/s/lj0gd0y"}
+        >
+          <img src={fiverr} alt="fv-icon" />
+        </a>
+      )}
+      {lv && (
+        <a target="_blank" href={link}>
+          <img src={live} alt="lv-icon" />
         </a>
       )}
     </div>

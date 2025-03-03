@@ -58,6 +58,7 @@ const ContactSection = (props: sectionProps) => {
               <Icon fb />
               <Icon gh />
               <Icon ln />
+              <Icon fv />
             </div>
           </div>
         </motion.div>

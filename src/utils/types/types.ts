@@ -36,8 +36,13 @@ export type Project = {
   type?: string;
   stack?: string;
   liveURL?: string;
-  more?: string;
+  fiverr?: string;
+  github?: string;
 };
+
+export interface ProjectBoxProps extends Project {
+  onOpenModal: () => void;
+}
 
 export interface ModalProps {
   project: Project;
@@ -50,4 +55,3 @@ export type BurgerMenuProps = {
   handleClick: (e: React.MouseEvent, section: string) => void;
   activeLink: string;
 };
-
