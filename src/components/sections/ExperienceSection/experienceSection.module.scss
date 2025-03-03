@@ -4,17 +4,17 @@
 .experience {
     @extend .container;
     background: $deep-ocean-gradient;
-    min-height: 100vmin;
+    height: 100vh;
     &_wrapper {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         flex-direction: column;
         margin: auto;
+        padding: 1rem 0.5rem;
         width: 100%;
         gap: 5rem;
         max-width: 1320px;
-        padding: 6.25rem 0;
         &_info {
             display: flex;
             flex-direction: column;
@@ -43,8 +43,49 @@
         }
         &_experienceBoxes {
             display: flex;
-            flex-direction: column;
             gap: 1rem;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .experience {
+        &_wrapper {
+            align-items: center;
+            gap: 1rem;
+            &_info {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+
+                &_title {
+                    > p {
+                        font-size: 0.8em;
+                    }
+                }
+                &_providing {
+                    > p {
+                        font-size: 2em;
+                    }
+                }
+            }
+            &_experienceBoxes {
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .experience {
+        height: 100%;
+        &_wrapper {
+            padding: 4.375rem 0;
+            &_experienceBoxes {
+                flex-wrap: wrap;
+            }
         }
     }
 }

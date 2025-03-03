@@ -41,7 +41,7 @@ const ExperienceSection = (props: sectionProps) => {
           className={styles.experience_wrapper_experienceBoxes}
         >
           <ExperienceBox
-            position="Svelte Developer"
+            position="Svelte.js Developer"
             location="Remote"
             duration="May 2022 - Jul 2022"
             type="Full Time"
