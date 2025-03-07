@@ -3,6 +3,7 @@ import fiverr from "../../../assets/icons/social/fiverr.svg";
 import github from "../../../assets/icons/social/github.svg";
 import linkedin from "../../../assets/icons/social/linkedin.svg";
 import live from "../../../assets/icons/social/live.png";
+import resume from "../../../assets/icons/cv.png";
 import styles from "./icon.module.scss";
 
 const Icon = ({
@@ -11,6 +12,7 @@ const Icon = ({
   ln,
   fv,
   lv,
+  cv,
   link,
 }: {
   fb?: boolean;
@@ -18,6 +20,7 @@ const Icon = ({
   ln?: boolean;
   fv?: boolean;
   lv?: boolean;
+  cv?: boolean;
   link?: string;
 }) => {
   return (
@@ -57,6 +60,11 @@ const Icon = ({
       {lv && (
         <a target="_blank" href={link}>
           <img src={live} alt="lv-icon" />
+        </a>
+      )}
+      {cv && (
+        <a target="_blank" href={link} download>
+          <img src={resume} alt="cv-icon" />
         </a>
       )}
     </div>

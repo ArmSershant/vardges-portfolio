@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
+import cv from "../../../assets/files/Vardges Movsesyan CV AM.pdf";
 import vardges from "../../../assets/images/vardges.png";
 import { scrolling } from "../../../utils/functions/scrolling";
 import { springTransition } from "../../../utils/transitions";
@@ -82,6 +83,7 @@ const MainSection = (props: sectionProps) => {
               <Icon gh />
               <Icon ln />
               <Icon fv />
+              <Icon cv link={cv} />
             </div>
           </motion.div>
         </motion.div>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import cv from "../../../assets/files/Vardges Movsesyan CV AM.pdf";
 import hacker from "../../../assets/images/hacker2.png";
 import { springTransition } from "../../../utils/transitions";
 import { sectionProps } from "../../../utils/types/types";
@@ -59,6 +60,7 @@ const ContactSection = (props: sectionProps) => {
               <Icon gh />
               <Icon ln />
               <Icon fv />
+              <Icon cv link={cv} />
             </div>
           </div>
         </motion.div>
