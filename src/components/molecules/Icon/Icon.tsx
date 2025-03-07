@@ -63,7 +63,7 @@ const Icon = ({
         </a>
       )}
       {cv && (
-        <a target="_blank" href={link} download>
+        <a target="_blank" href={link}>
           <img src={resume} alt="cv-icon" />
         </a>
       )}
