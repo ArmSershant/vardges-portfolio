@@ -25,8 +25,7 @@ const ServicesSection = (props: sectionProps) => {
               <Typewriter
                 words={["Services I am providing", "Services I am providing"]}
                 loop={true}
-                cursor
-                cursorStyle="|"
+                cursor={false}
                 typeSpeed={100}
                 deleteSpeed={50}
                 delaySpeed={2500}

@@ -24,8 +24,7 @@ const ExperienceSection = (props: sectionProps) => {
               <Typewriter
                 words={["MY WORK EXPERIENCE", "MY WORK EXPERIENCE"]}
                 loop={true}
-                cursor
-                cursorStyle="|"
+                cursor={false}
                 typeSpeed={100}
                 deleteSpeed={50}
                 delaySpeed={2500}

@@ -41,8 +41,7 @@ const MainSection = (props: sectionProps) => {
               <Typewriter
                 words={["I'm a Developer", "I'm a Developer"]}
                 loop={true}
-                cursor
-                cursorStyle="|"
+                cursor={false}
                 typeSpeed={100}
                 deleteSpeed={50}
                 delaySpeed={2500}
@@ -76,7 +75,7 @@ const MainSection = (props: sectionProps) => {
               className={styles.main_wrapper_info_contacts_contactLink}
               onClick={(e) => scrolling(e, "contact")}
             >
-              <Button arrow={true}>GET IN TOUCH</Button>
+              <Button>GET IN TOUCH</Button>
             </a>
             <div>
               <Icon fb />

@@ -45,8 +45,7 @@ const ProjectsSection = (props: sectionProps) => {
               <Typewriter
                 words={["MY RECENT PROJECTS", "MY RECENT PROJECTS"]}
                 loop={true}
-                cursor
-                cursorStyle="|"
+                cursor={false}
                 typeSpeed={100}
                 deleteSpeed={50}
                 delaySpeed={2500}
