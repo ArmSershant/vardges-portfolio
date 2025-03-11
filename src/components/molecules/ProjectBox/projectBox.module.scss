@@ -12,6 +12,7 @@
     gap: 1rem;
     > img,
     > video {
+        mix-blend-mode: lighten;
         margin: auto;
         width: 80%;
         height: 80%;
@@ -21,8 +22,6 @@
         border-radius: 0.8rem;
         &:hover {
             transform: scale(0.7);
-            object-fit: contain;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
     }
     &_infoWrapper {
