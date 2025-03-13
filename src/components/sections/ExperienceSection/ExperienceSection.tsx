@@ -38,7 +38,7 @@ const ExperienceSection = (props: sectionProps) => {
           <ExperienceBox
             position="Svelte.js Developer"
             location="Remote"
-            duration="May 2022 - Jul 2022"
+            duration="May 2022 - Jun 2023"
             type="Full Time"
             title="Langoid"
             description="Langoid was created by a group of language lovers who are always experimenting with different ways to learn languages. They have tried and tested various language learning apps and tools and have combined their knowledge to create a platform that is designed for real language learners. From this experience we realized that even though there are so many tools available out there, we still encountered many obstacles."
@@ -47,7 +47,7 @@ const ExperienceSection = (props: sectionProps) => {
           <ExperienceBox
             position="Web/Game Developer"
             location="Onsite"
-            duration="Jun 2023 - Nov 2024"
+            duration="July 2023 - Nov 2024"
             type="Full Time"
             title="Prof It"
             description="PROFit D.C. is a company of experienced and qualified professionals who have interest in high-caliber web development. We work on a wide range of technologies ranging from open source to proprietary and custom built solutions, to deliver full spectrum of modern services to our customers globally. Our team of professionals is trying to be highly flexible in the competitive market."
