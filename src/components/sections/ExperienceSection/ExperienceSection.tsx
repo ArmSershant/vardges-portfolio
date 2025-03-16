@@ -47,7 +47,7 @@ const ExperienceSection = (props: sectionProps) => {
           <ExperienceBox
             position="Web/Game Developer"
             location="Onsite"
-            duration="Jul 2023 - Nov 2024"
+            duration="Jun 2023 - Nov 2024"
             type="Full Time"
             title="Prof It"
             description="PROFit D.C. is a company of experienced and qualified professionals who have interest in high-caliber web development. We work on a wide range of technologies ranging from open source to proprietary and custom built solutions, to deliver full spectrum of modern services to our customers globally. Our team of professionals is trying to be highly flexible in the competitive market."
