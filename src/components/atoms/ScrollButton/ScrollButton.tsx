@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import arrowUp from "../../../assets/icons/up.svg";
 import styles from "./scrollButton.module.scss";
+import { scrollToTop } from "../../../utils/functions/scrolling";
 
 const ScrollButton = () => {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
@@ -14,16 +15,12 @@ const ScrollButton = () => {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <AnimatePresence>
       {scrollPosition > 300 && (
         <motion.button
           className={styles.scroll}
-          onClick={scrollToTop}
+          onClick={() => scrollToTop()}
           initial={{ y: 0, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { duration: 0.6 } }}
           exit={{ y: 100, opacity: 0, transition: { duration: 0.6 } }}

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import burgerButton from "../../../assets/icons/burger.svg";
-import { scrolling } from "../../../utils/functions/scrolling";
+import { scrolling, scrollToTop } from "../../../utils/functions/scrolling";
 import Button from "../../atoms/Button/Button";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
 import styles from "./navbar.module.scss";
@@ -29,7 +29,10 @@ const Navbar = () => {
   return (
     <div className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <div className={styles.navbar_wrapper}>
-        <div className={styles.navbar_wrapper_logo}>
+        <div
+          onClick={() => scrollToTop()}
+          className={styles.navbar_wrapper_logo}
+        >
           <img src="/logo.png" alt="vardges-logo" />
           ardges
         </div>
