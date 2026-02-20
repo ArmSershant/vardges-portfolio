@@ -17,7 +17,7 @@
     "react-fast-marquee": "^1.6.5",
     "react-simple-typewriter": "^5.0.1",
     "sass": "^1.85.1",
-    "swiper": "^11.2.4"
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
