@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./App.scss";
 import DefaultLayout from "./layouts/defaultLayout/DefaultLayout";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   useEffect(() => {
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <DefaultLayout />
+      <SpeedInsights />
     </>
   );
 }
